@@ -3,7 +3,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
+from server import server
 import os
 from plugins.config import Config
 
@@ -24,3 +24,4 @@ if __name__ == "__main__" :
         api_hash=Config.API_HASH,
         plugins=plugins)
     Ntbot.run()
+    server()
